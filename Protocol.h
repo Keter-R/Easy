@@ -7,8 +7,9 @@
 
 namespace RawSolution
 {
-	class Protocol
+	class Protocol : public QObject
 	{
+		Q_OBJECT
 		public:
 			static Protocol* Instance();
 			bool checkConnection();
@@ -23,6 +24,7 @@ namespace RawSolution
 			void removeChatRoom(QString roomId);
 			void joinChatRoom(QString account, QString roomId);
 			void quitChatRoom(QString account, QString roomId);
+			void changeAvatar(QString account, QImage avatar);
 
 		private:
 			static Protocol* instance;

@@ -1,4 +1,10 @@
 <RCC>
-    <qresource prefix="Easy">
+    <qresource prefix="/Easy">
+        <file>src/icon/message.svg</file>
+        <file>src/icon/setting.svg</file>
+        <file>src/icon/upload_image.svg</file>
+        <file>src/icon/user.svg</file>
+        <file>src/icon/view.svg</file>
+        <file>src/icon/view_off.svg</file>
     </qresource>
 </RCC>

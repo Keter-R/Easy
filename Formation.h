@@ -5,6 +5,7 @@
 #include<QJsonDocument>
 #include<QJsonArray>
 #include<QSet>
+#include<QImage>
 
 
 namespace DataFormation
@@ -13,14 +14,18 @@ namespace DataFormation
 
 	AccountSet toAccountSet(QString raw);
 	QString toQString(AccountSet set);
+	QImage toQImage(QString raw);
+	QString toQString(QImage image);
 
 	struct User
 	{
+		QString avatar;
 		QString name;
 		QString account;
 		QString password;
 		AccountSet friends;
 		AccountSet groups;
+		QImage getRoundAvatar(int radius = 50);
 	};
 
 	struct ChatRoom

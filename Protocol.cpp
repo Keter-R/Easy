@@ -48,6 +48,7 @@ User RawSolution::Protocol::getUser(QString account)
 	user.password = query.value(2).toString();
 	user.friends = toAccountSet(query.value(3).toString());
 	user.groups = toAccountSet(query.value(4).toString());
+	user.avatar = query.value(5).toString();
 	return user;
 }
 
@@ -176,5 +177,16 @@ void RawSolution::Protocol::quitChatRoom(QString account, QString roomId)
 	query.prepare("update chatroom set members = :members where roomId = :roomId");
 	query.bindValue(":members", toQString(chatRoom.members));
 	query.bindValue(":roomId", roomId);
+	query.exec();
+}
+
+void RawSolution::Protocol::changeAvatar(QString account, QImage avatar)
+{
+	QSqlQuery query(dbLnk);
+	User user = getUser(account);
+	user.avatar = toQString(avatar);
+	query.prepare("update user set user.avatar = :avatar where account = :account");
+	query.bindValue(":avatar", toQString(avatar));
+	query.bindValue(":account", account);
 	query.exec();
 }
