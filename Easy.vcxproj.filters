@@ -120,5 +120,14 @@
     <None Include="src\icon\view_off.svg">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="src\icon\setting.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="src\icon\message.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="src\icon\user.svg">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

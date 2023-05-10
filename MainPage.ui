@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>519</width>
-    <height>699</height>
+    <width>600</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,18 +17,31 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout" stretch="8,1">
      <item>
-      <widget class="QStackedWidget" name="stackedWidget"/>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QWidget" name="widget" native="true">
+      <widget class="QWidget" name="tabBarWidget" native="true">
        <property name="autoFillBackground">
-        <bool>true</bool>
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(230, 230, 250);</string>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout">
+         <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1">
           <property name="spacing">
-           <number>0</number>
+           <number>120</number>
+          </property>
+          <property name="topMargin">
+           <number>8</number>
+          </property>
+          <property name="bottomMargin">
+           <number>8</number>
           </property>
           <item>
            <widget class="QToolButton" name="switchChatPage">
@@ -38,8 +51,23 @@
               <height>80</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>聊天</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/icon/message.svg</normaloff>src/icon/message.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -62,6 +90,16 @@
             </property>
             <property name="text">
              <string>联系人</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/icon/user.svg</normaloff>src/icon/user.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -87,6 +125,16 @@
             </property>
             <property name="text">
              <string>主页</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/icon/setting.svg</normaloff>src/icon/setting.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
             </property>
             <property name="checkable">
              <bool>true</bool>

@@ -114,6 +114,9 @@
     <ClInclude Include="Protocol.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="src\icon\message.svg" />
+    <None Include="src\icon\setting.svg" />
+    <None Include="src\icon\user.svg" />
     <None Include="src\icon\view.svg" />
     <None Include="src\icon\view_off.svg" />
   </ItemGroup>
