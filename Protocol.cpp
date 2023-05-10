@@ -46,6 +46,8 @@ User RawSolution::Protocol::getUser(QString account)
 	user.name = query.value(0).toString();
 	user.account = query.value(1).toString();
 	user.password = query.value(2).toString();
+	user.friends = toAccountSet(query.value(3).toString());
+	user.groups = toAccountSet(query.value(4).toString());
 	return user;
 }
 
@@ -110,18 +112,19 @@ void RawSolution::Protocol::addFriend(QString account, QString friendAccount)
 	query.exec();
 }
 
-void RawSolution::Protocol::addChatRoom(QString account, QString name)
+void RawSolution::Protocol::addChatRoom(QString hostAccount, DataFormation::ChatRoom chatRoom)
 {
 	QSqlQuery query(dbLnk);
-	ChatRoom chatRoom;
-	chatRoom.name = name;
-	qsrand(QTime::currentTime().msec());
-	chatRoom.roomId = QString::number(1ull * qrand() * qrand() * qrand());
-	chatRoom.members.insert(account);
 	query.prepare("insert into chatroom values(:name, :roomId, :members)");
 	query.bindValue(":name", chatRoom.name);
 	query.bindValue(":roomId", chatRoom.roomId);
 	query.bindValue(":members", toQString(chatRoom.members));
+	auto res = query.exec();
+	User user = getUser(hostAccount);
+	user.groups.insert(chatRoom.roomId);
+	query.prepare("update user set user.groups = :groups where account = :account");
+	query.bindValue(":groups", toQString(user.groups));
+	query.bindValue(":account", user.account);
 	query.exec();
 }
 

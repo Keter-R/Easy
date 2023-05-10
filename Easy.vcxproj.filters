@@ -26,13 +26,13 @@
     <QtRcc Include="Easy.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <QtUic Include="Easy.ui">
+    <QtUic Include="LoginPage.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="Easy.h">
+    <QtMoc Include="LoginPage.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClCompile Include="Easy.cpp">
+    <ClCompile Include="LoginPage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -46,6 +46,24 @@
     <ClCompile Include="Formation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MainWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactsPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionalPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactsListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactsListWidgetItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Protocol.h">
@@ -54,5 +72,36 @@
     <ClInclude Include="Formation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MainWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ContactsPage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="FunctionalPage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MainPage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ContactsListWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ContactsListWidgetItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ContactsPage.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="FunctionalPage.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MainPage.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
 </Project>

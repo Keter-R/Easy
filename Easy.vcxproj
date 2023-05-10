@@ -83,16 +83,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ContactsListWidgetItem.cpp" />
+    <ClCompile Include="ContactsListWidget.cpp" />
+    <ClCompile Include="ContactsPage.cpp" />
     <ClCompile Include="Formation.cpp" />
+    <ClCompile Include="FunctionalPage.cpp" />
+    <ClCompile Include="MainPage.cpp" />
+    <ClCompile Include="MainWidget.cpp" />
     <ClCompile Include="Protocol.cpp" />
     <QtRcc Include="Easy.qrc" />
-    <QtUic Include="Easy.ui" />
-    <QtMoc Include="Easy.h" />
-    <ClCompile Include="Easy.cpp" />
+    <QtUic Include="ContactsPage.ui" />
+    <QtUic Include="FunctionalPage.ui" />
+    <QtUic Include="LoginPage.ui" />
+    <QtMoc Include="LoginPage.h" />
+    <ClCompile Include="LoginPage.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="MainPage.ui" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="ContactsPage.h" />
+    <QtMoc Include="ContactsListWidgetItem.h" />
+    <QtMoc Include="ContactsListWidget.h" />
     <ClInclude Include="Formation.h" />
+    <QtMoc Include="MainWidget.h" />
+    <QtMoc Include="FunctionalPage.h" />
+    <QtMoc Include="MainPage.h" />
     <ClInclude Include="Protocol.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

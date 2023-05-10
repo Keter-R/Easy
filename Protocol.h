@@ -18,7 +18,7 @@ namespace RawSolution
 			QVector<DataFormation::Message> getMessages(QString receiver);
 			void addMessage(DataFormation::Message msg);
 			void addFriend(QString account, QString friendAccount);
-			void addChatRoom(QString account, QString name);
+			void addChatRoom(QString hostAccount, DataFormation::ChatRoom chatRoom);
 			void removeFriend(QString account, QString friendAccount);
 			void removeChatRoom(QString roomId);
 			void joinChatRoom(QString account, QString roomId);
