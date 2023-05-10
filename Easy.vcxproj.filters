@@ -64,6 +64,9 @@
     <ClCompile Include="ContactsListWidgetItem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ChatPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Protocol.h">
@@ -92,6 +95,9 @@
     <QtMoc Include="ContactsListWidgetItem.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="ChatPage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="ContactsPage.ui">
@@ -101,6 +107,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="MainPage.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ChatPage.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

@@ -10,6 +10,9 @@ ContactsPage::ContactsPage(DataFormation::User user, QWidget* parent)
 	connect(ui.personList, &ContactsListWidget::itemDoubleClicked, [=](QString account) {
 		emit chatTo(account);
 		});
+	connect(ui.groupsList, &ContactsListWidget::itemDoubleClicked, [=](QString roomId) {
+		emit chatTo(roomId);
+		});
 	ui.groupsList->hide();
 	ui.personList->hide();
 	connect(ui.personButton, &QPushButton::clicked, [=]() {

@@ -83,6 +83,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ChatPage.cpp" />
     <ClCompile Include="ContactsListWidgetItem.cpp" />
     <ClCompile Include="ContactsListWidget.cpp" />
     <ClCompile Include="ContactsPage.cpp" />
@@ -92,6 +93,7 @@
     <ClCompile Include="MainWidget.cpp" />
     <ClCompile Include="Protocol.cpp" />
     <QtRcc Include="Easy.qrc" />
+    <QtUic Include="ChatPage.ui" />
     <QtUic Include="ContactsPage.ui" />
     <QtUic Include="FunctionalPage.ui" />
     <QtUic Include="LoginPage.ui" />
@@ -104,6 +106,7 @@
     <QtMoc Include="ContactsPage.h" />
     <QtMoc Include="ContactsListWidgetItem.h" />
     <QtMoc Include="ContactsListWidget.h" />
+    <QtMoc Include="ChatPage.h" />
     <ClInclude Include="Formation.h" />
     <QtMoc Include="MainWidget.h" />
     <QtMoc Include="FunctionalPage.h" />

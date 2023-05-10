@@ -4,6 +4,7 @@
 #include "Protocol.h"
 #include "ContactsPage.h"
 #include "FunctionalPage.h"
+#include "ChatPage.h"
 
 
 class MainPage :
@@ -18,6 +19,6 @@ class MainPage :
         DataFormation::User currentUser;
         ContactsPage* contactsPage;
         FunctionalPage* functionalPage;
-
+        ChatPage* chatPage;
 };
 
