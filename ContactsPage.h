@@ -19,7 +19,6 @@ class ContactsPage :
         DataFormation::User user;
 
     signals:
-        void chatTo(DataFormation::User user);
-	    void chatTo(DataFormation::ChatRoom chatRoom);
+        void chatTo(QString account);
 };
 

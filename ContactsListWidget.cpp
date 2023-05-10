@@ -3,8 +3,8 @@
 ContactsListWidget::ContactsListWidget(QWidget* parent)
 	: QListWidget(parent)
 {
-	connect(this, &QListWidget::itemClicked, [=](QListWidgetItem* item) {
-		emit itemClicked(item->data(Qt::UserRole).toString());
+	connect(this, &QListWidget::itemDoubleClicked, [=](QListWidgetItem* item) {
+		emit itemDoubleClicked(item->data(Qt::UserRole).toString());
 		});
 	this->setSpacing(5);
 }

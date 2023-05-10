@@ -110,6 +110,10 @@
     <QtMoc Include="MainPage.h" />
     <ClInclude Include="Protocol.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\icon\view.svg" />
+    <None Include="src\icon\view_off.svg" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
     <Import Project="$(QtMsBuild)\qt.targets" />

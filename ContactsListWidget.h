@@ -12,7 +12,7 @@ class ContactsListWidget :
         void addItem(const QString& name, const QString& account);
 
     signals:
-        void itemClicked(const QString& account);
+        void itemDoubleClicked(const QString& account);
 };
 
 

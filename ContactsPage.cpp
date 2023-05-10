@@ -1,4 +1,5 @@
 #include "ContactsPage.h"
+#include <QPushButton>
 
 ContactsPage::ContactsPage(DataFormation::User user, QWidget* parent)
 	: QWidget(parent)
@@ -6,6 +7,35 @@ ContactsPage::ContactsPage(DataFormation::User user, QWidget* parent)
 	ui.setupUi(this);
 	this->user = user;
 	this->refresh();
+	connect(ui.personList, &ContactsListWidget::itemDoubleClicked, [=](QString account) {
+		emit chatTo(account);
+		});
+	ui.groupsList->hide();
+	ui.personList->hide();
+	connect(ui.personButton, &QPushButton::clicked, [=]() {
+		if (ui.personList->isHidden())
+		{
+			ui.personList->show();
+			ui.personButton->setIcon(QIcon("src/icon/view.svg"));
+		}
+		else
+		{
+			ui.personList->hide();
+			ui.personButton->setIcon(QIcon("src/icon/view_off.svg"));
+		}
+		});
+	connect(ui.groupButton, &QPushButton::clicked, [=]() {
+		if (ui.groupsList->isHidden())
+		{
+			ui.groupsList->show();
+			ui.groupButton->setIcon(QIcon("src/icon/view.svg"));
+		}
+		else
+		{
+			ui.groupsList->hide();
+			ui.groupButton->setIcon(QIcon("src/icon/view_off.svg"));
+		}
+		});
 }
 
 ContactsPage::~ContactsPage()

@@ -104,4 +104,12 @@
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\icon\view.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="src\icon\view_off.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
