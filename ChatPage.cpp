@@ -6,6 +6,7 @@
 ChatPage::ChatPage(QString user, QWidget* parent) :currentUserAccount(user), QWidget(parent)
 {
 	ui.setupUi(this);
+	refreshTimer = nullptr;
 	connect(ui.sendButton, &QPushButton::clicked, this, [=]() {
 		if (ui.textContent->toPlainText().isEmpty())
 		{
@@ -83,5 +84,6 @@ void ChatPage::startAutoRefresh()
 
 void ChatPage::stopAutoRefresh()
 {
-	refreshTimer->stop();
+	if(refreshTimer && refreshTimer->isActive())
+		refreshTimer->stop();
 }

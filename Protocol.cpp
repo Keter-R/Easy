@@ -175,7 +175,7 @@ void RawSolution::Protocol::joinChatRoom(QString account, QString roomId)
 	chatRoom.members.insert(account);
 	User user = getUser(account);
 	user.groups.insert(roomId);
-	query.prepare("update user set groups = :groups where account = :account");
+	query.prepare("update user set user.groups = :groups where account = :account");
 	query.bindValue(":groups", toQString(user.groups));
 	query.bindValue(":account", account);
 	query.exec();
