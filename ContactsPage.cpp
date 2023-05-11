@@ -8,7 +8,7 @@ ContactsPage::ContactsPage(DataFormation::User user, QWidget* parent)
 {
 	ui.setupUi(this);
 	this->user = user;
-	//this->refresh();
+	this->refresh();
 	connect(ui.personList, &ContactsListWidget::itemDoubleClicked, [=](QString account) {
 		emit chatTo(account);
 		});

@@ -42,4 +42,16 @@ namespace DataFormation
 		QString content;
 		QString time;
 	};
+
+	struct MessageContent
+	{
+		QString type;
+		QString content;
+		QString fileLink;
+		QString fileName;
+	};
+
+
+	MessageContent toMessageContent(QString raw);
+	QString toQString(MessageContent content);
 }

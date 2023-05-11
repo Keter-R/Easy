@@ -82,6 +82,7 @@ QVector<Message> RawSolution::Protocol::getMessages(QString receiver)
 		msg.time = query.value(3).toString();
 		messages.push_back(msg);
 	}
+	std::sort(messages.begin(), messages.end(), [](Message a, Message b) {return a.time < b.time; });
 	return messages;
 }
 

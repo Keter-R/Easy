@@ -11,6 +11,7 @@ class ChatPage :
 		ChatPage(QString user, QWidget* parent = nullptr);
         void setCurrentChaterAccount(QString account);
 		~ChatPage();
+        void refresh();
 
     private:
         Ui::ChatPageWidget ui;

@@ -91,6 +91,8 @@
     <ClCompile Include="FunctionalPage.cpp" />
     <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="MainWidget.cpp" />
+    <ClCompile Include="MessageListWidget.cpp" />
+    <ClCompile Include="MessageListWidgetItem.cpp" />
     <ClCompile Include="Protocol.cpp" />
     <QtRcc Include="Easy.qrc" />
     <QtUic Include="ChatPage.ui" />
@@ -103,6 +105,8 @@
     <QtUic Include="MainPage.ui" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MessageListWidget.h" />
+    <ClInclude Include="MessageListWidgetItem.h" />
     <QtMoc Include="ContactsPage.h" />
     <QtMoc Include="ContactsListWidgetItem.h" />
     <QtMoc Include="ContactsListWidget.h" />

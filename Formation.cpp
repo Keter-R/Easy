@@ -59,3 +59,26 @@ QImage DataFormation::User::getRoundAvatar(int radius)
 	painter.drawPixmap(0, 0, radius * 2, radius * 2, QPixmap::fromImage(avatar));
 	return image;
 }
+
+MessageContent DataFormation::toMessageContent(QString raw)
+{
+	QJsonDocument doc = QJsonDocument::fromJson(raw.toUtf8());
+	QJsonObject obj = doc.object();
+	MessageContent content;
+	content.type = obj["type"].toString();
+	content.content = obj["content"].toString();
+	content.fileLink = obj["fileLink"].toString();
+	content.fileName = obj["fileName"].toString();
+	return content;
+}
+
+QString DataFormation::toQString(MessageContent content)
+{
+	QJsonObject obj;
+	obj["type"] = content.type;
+	obj["content"] = content.content;
+	obj["fileLink"] = content.fileLink;
+	obj["fileName"] = content.fileName;
+	QJsonDocument doc(obj);
+	return doc.toJson();
+}

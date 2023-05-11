@@ -6,5 +6,6 @@
         <file>src/icon/user.svg</file>
         <file>src/icon/view.svg</file>
         <file>src/icon/view_off.svg</file>
+        <file>src/icon/upload_file.svg</file>
     </qresource>
 </RCC>
