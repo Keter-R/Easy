@@ -21,6 +21,24 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="Header Files\ChatComponent">
+      <UniqueIdentifier>{917a2c93-5337-46bc-88bc-979b07807a44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ContactComponent">
+      <UniqueIdentifier>{059bae2f-0240-4181-8278-81ecd45e2995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ContactComponent">
+      <UniqueIdentifier>{5ecb0957-fdc7-45ff-9ca0-a5eb04df6bc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ChatComponent">
+      <UniqueIdentifier>{74f7d2aa-60da-4c33-b134-b86605791359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FunctionalComponent">
+      <UniqueIdentifier>{916e3cbc-3ad7-4158-83ac-1fc697f25529}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FunctionalComponent">
+      <UniqueIdentifier>{cba7c756-ef49-4481-a6b8-64711fd69681}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="Easy.qrc">
@@ -49,29 +67,29 @@
     <ClCompile Include="MainWidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ContactsPage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FunctionalPage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MainPage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ContactsListWidget.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ContactsListWidgetItem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ChatPage.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ChatComponent</Filter>
     </ClCompile>
     <ClCompile Include="MessageListWidget.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ChatComponent</Filter>
     </ClCompile>
     <ClCompile Include="MessageListWidgetItem.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ChatComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactsListWidget.cpp">
+      <Filter>Source Files\ContactComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactsListWidgetItem.cpp">
+      <Filter>Source Files\ContactComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactsPage.cpp">
+      <Filter>Source Files\ContactComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionalPage.cpp">
+      <Filter>Source Files\FunctionalComponent</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -79,36 +97,36 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MessageListWidget.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\ChatComponent</Filter>
     </ClInclude>
     <ClInclude Include="MessageListWidgetItem.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\ChatComponent</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MainWidget.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="ContactsPage.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="FunctionalPage.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="MainPage.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="ContactsListWidget.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="ContactsListWidgetItem.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="ChatPage.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="Protocol.h">
       <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ChatPage.h">
+      <Filter>Header Files\ChatComponent</Filter>
+    </QtMoc>
+    <QtMoc Include="ContactsListWidget.h">
+      <Filter>Header Files\ContactComponent</Filter>
+    </QtMoc>
+    <QtMoc Include="ContactsListWidgetItem.h">
+      <Filter>Header Files\ContactComponent</Filter>
+    </QtMoc>
+    <QtMoc Include="ContactsPage.h">
+      <Filter>Header Files\ContactComponent</Filter>
+    </QtMoc>
+    <QtMoc Include="FunctionalPage.h">
+      <Filter>Header Files\FunctionalComponent</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
