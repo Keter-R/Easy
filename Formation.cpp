@@ -49,15 +49,15 @@ QString DataFormation::toQString(QImage image)
 
 QImage DataFormation::User::getRoundAvatar(int radius)
 {
-	QImage avatar = toQImage(this->avatar);
-	QImage image = avatar.scaled(radius * 2, radius * 2, Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
-	QPainter painter(&image);
-	painter.setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
+	QImage avatar = toQImage(this->avatar).scaled(radius * 2, radius * 2, Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
+	QImage result(radius * 2, radius * 2, QImage::Format_ARGB32);
+	result.fill(Qt::transparent);
+	QPainter painter(&result);
 	QPainterPath path;
 	path.addEllipse(0, 0, radius * 2, radius * 2);
 	painter.setClipPath(path);
-	painter.drawPixmap(0, 0, radius * 2, radius * 2, QPixmap::fromImage(avatar));
-	return image;
+	painter.drawImage(0, 0, avatar);
+	return result;
 }
 
 MessageContent DataFormation::toMessageContent(QString raw)

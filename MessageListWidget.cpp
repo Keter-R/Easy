@@ -3,6 +3,8 @@
 MessageListWidget::MessageListWidget(QWidget* parent)
 	: QListWidget(parent)
 {
+	// make all items unselectable
+	this->setSelectionMode(QAbstractItemView::NoSelection);
 }
 
 MessageListWidget::~MessageListWidget()
