@@ -36,7 +36,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QWidget" name="MessageWidget" native="true"/>
+      <widget class="MessageListWidget" name="MessageList"/>
      </item>
      <item>
       <widget class="QWidget" name="InputBarWidget" native="true">
@@ -97,6 +97,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MessageListWidget</class>
+   <extends>QListWidget</extends>
+   <header>MessageListWidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="Easy.qrc"/>
  </resources>

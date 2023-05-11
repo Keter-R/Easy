@@ -16,7 +16,8 @@ namespace RawSolution
 			bool login(QString account, QString password);
 			DataFormation::User getUser(QString account);
 			DataFormation::ChatRoom getChatRoom(QString roomId);
-			QVector<DataFormation::Message> getMessages(QString receiver);
+			QVector<DataFormation::Message> getRoomMessages(QString roomId);
+			QVector<DataFormation::Message> getBiMessages(QString userAccount, QString friendAccount);
 			void addMessage(DataFormation::Message msg);
 			void addFriend(QString account, QString friendAccount);
 			void addChatRoom(QString hostAccount, DataFormation::ChatRoom chatRoom);

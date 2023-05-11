@@ -103,10 +103,11 @@
     <ClCompile Include="LoginPage.cpp" />
     <ClCompile Include="main.cpp" />
     <QtUic Include="MainPage.ui" />
+    <QtUic Include="MessageListWidgetItem.ui" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MessageListWidget.h" />
-    <ClInclude Include="MessageListWidgetItem.h" />
+    <QtMoc Include="MessageListWidget.h" />
+    <QtMoc Include="MessageListWidgetItem.h" />
     <QtMoc Include="ContactsPage.h" />
     <QtMoc Include="ContactsListWidgetItem.h" />
     <QtMoc Include="ContactsListWidget.h" />

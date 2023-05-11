@@ -82,3 +82,13 @@ QString DataFormation::toQString(MessageContent content)
 	QJsonDocument doc(obj);
 	return doc.toJson();
 }
+
+bool DataFormation::Message::operator>(const Message& other) const
+{
+	return this->time > other.time;
+}
+
+bool DataFormation::Message::operator<(const Message& other) const
+{
+	return this->time < other.time;
+}

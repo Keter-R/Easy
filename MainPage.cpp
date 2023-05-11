@@ -17,19 +17,23 @@ MainPage::MainPage(DataFormation::User currentUser, QWidget* parent)
 		{
 			ui.stackedWidget->setCurrentWidget(contactsPage);
 			contactsPage->refresh();
+			chatPage->stopAutoRefresh();
 		});
 	connect(ui.switchFunctioanlPage, &QPushButton::clicked, [=]()
 		{
 			ui.stackedWidget->setCurrentWidget(functionalPage);
+			chatPage->stopAutoRefresh();
 		});
 	connect(ui.switchChatPage, &QPushButton::clicked, [=]()
 		{
 			ui.stackedWidget->setCurrentWidget(chatPage);
+			chatPage->startAutoRefresh();
 		});
 	connect(contactsPage, &ContactsPage::chatTo, [=](QString account)
 		{
 			ui.stackedWidget->setCurrentWidget(chatPage);
 			chatPage->setCurrentChaterAccount(account);
+			chatPage->startAutoRefresh();
 		});
 	connect(ui.stackedWidget, &QStackedWidget::currentChanged, [=](int id) {
 		if (id == 0)

@@ -96,12 +96,6 @@
     <ClInclude Include="Formation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MessageListWidget.h">
-      <Filter>Header Files\ChatComponent</Filter>
-    </ClInclude>
-    <ClInclude Include="MessageListWidgetItem.h">
-      <Filter>Header Files\ChatComponent</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MainWidget.h">
@@ -128,6 +122,12 @@
     <QtMoc Include="FunctionalPage.h">
       <Filter>Header Files\FunctionalComponent</Filter>
     </QtMoc>
+    <QtMoc Include="MessageListWidget.h">
+      <Filter>Header Files\ChatComponent</Filter>
+    </QtMoc>
+    <QtMoc Include="MessageListWidgetItem.h">
+      <Filter>Header Files\ChatComponent</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="ContactsPage.ui">
@@ -140,6 +140,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="ChatPage.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MessageListWidgetItem.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

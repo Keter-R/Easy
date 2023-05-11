@@ -66,11 +66,32 @@ ChatRoom RawSolution::Protocol::getChatRoom(QString roomId)
 	return chatRoom;
 }
 
-QVector<Message> RawSolution::Protocol::getMessages(QString receiver)
+QVector<Message> RawSolution::Protocol::getRoomMessages(QString roomId)
 {
 	QSqlQuery query(dbLnk);
 	query.prepare("select * from message where receiver = :receiver");
-	query.bindValue(":receiver", receiver);
+	query.bindValue(":receiver", roomId);
+	query.exec();
+	QVector<Message> messages;
+	while (query.next())
+	{
+		Message msg;
+		msg.sender = query.value(0).toString();
+		msg.receiver = query.value(1).toString();
+		msg.content = query.value(2).toString();
+		msg.time = query.value(3).toString();
+		messages.push_back(msg);
+	}
+	std::sort(messages.begin(), messages.end(), [](Message a, Message b) {return a.time < b.time; });
+	return messages;
+}
+
+QVector<Message> RawSolution::Protocol::getBiMessages(QString userAccount, QString friendAccount)
+{
+	QSqlQuery query(dbLnk);
+	query.prepare("select * from message where (sender = :sender and receiver = :receiver) or (sender = :receiver and receiver = :sender)");
+	query.bindValue(":sender", userAccount);
+	query.bindValue(":receiver", friendAccount);
 	query.exec();
 	QVector<Message> messages;
 	while (query.next())

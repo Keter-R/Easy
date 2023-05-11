@@ -41,6 +41,8 @@ namespace DataFormation
 		QString receiver;
 		QString content;
 		QString time;
+		bool operator > (const Message& other) const;
+		bool operator < (const Message& other) const;
 	};
 
 	struct MessageContent
