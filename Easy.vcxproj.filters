@@ -146,4 +146,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="mysql\example.sql">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>

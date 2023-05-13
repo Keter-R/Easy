@@ -10,7 +10,7 @@ RawSolution::Protocol::Protocol()
 	dbLnk.setDatabaseName("easy");
 	dbLnk.setHostName("localhost");
 	dbLnk.setUserName("root");
-	dbLnk.setPassword("karlis");
+	dbLnk.setPassword("hfut123456");
 	dbLnk.setPort(3306);
 	dbLnk.open();
 }
